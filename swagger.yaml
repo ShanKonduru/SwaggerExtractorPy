@@ -1,0 +1,27 @@
+basePath: /v1
+definitions:
+  User:
+    properties:
+      email:
+        type: string
+      id:
+        type: integer
+      username:
+        type: string
+    type: object
+info:
+  description: A sample API for demonstration purposes
+  title: Sample API
+  version: 1.0.0
+paths:
+  /api/users:
+    get:
+      responses:
+        '200':
+          description: A list of users
+          schema:
+            items:
+              $ref: '#/definitions/User'
+            type: array
+      summary: Get all users
+swagger: '2.0'
